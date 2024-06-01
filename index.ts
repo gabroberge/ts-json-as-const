@@ -42,15 +42,13 @@ for (const file of files) {
 
   const [declarationType, equals, terminator] =
     typeof json === 'object'
-      ? json && !Array.isArray(json)
-        ? ['interface', '', ''] as const
-        : ['type', ' =', ';'] as const
+      ? ['type', ' =', ';'] as const
       : ['const', ' =', ';'] as const;
 
   const name = path.basename(file);
   const typeName = (name.includes('.') ? name.slice(0, name.indexOf('.')) : name).toCamelCase(true);
   const output = `${declarationType !== 'const'
-    ? `${declarationType} ${typeName}${equals} ${jsonText}${terminator}
+    ? `export ${declarationType} ${typeName}${equals} ${jsonText}${terminator}
 
 declare const ${typeName}: ${typeName};`
     : `declare ${declarationType} ${typeName}${equals} ${jsonText}${terminator}`}

@@ -1,9 +1,11 @@
 {
-  "name": "ts-json-as-const",
-  "version": "1.0.7",
+  "name": "@gabroberge/ts-json-as-const",
+  "version": "1.0.8",
   "description": "A (very) simple CLI tool that reads JSON files and creates .d.ts files with their keys/values explicitly defined",
+  "private": false,
   "main": "index.js",
   "type": "module",
+  "packageManager":"pnpm@9.1.4",
   "scripts": {
     "start": "index.js",
     "build": "tsc"
@@ -22,10 +24,10 @@
   ],
   "author": "Bethany Hitch",
   "license": "ISC",
-  "homepage": "https://github.com/dfoverdx/ts-json-as-const",
+  "homepage": "https://github.com/gabroberge/ts-json-as-const",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dfoverdx/ts-json-as-const.git"
+    "url": "https://github.com/gabroberge/ts-json-as-const.git"
   },
   "devDependencies": {
     "@types/node": "^16.7.10",
