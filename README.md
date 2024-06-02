@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/gabroberge/ts-json-as-const/LICENSE)
 
-[![Server checks](https://github.com/gabroberge/ts-json-as-const/actions/workflows/ci.yml/badge.svg)](https://github.com/gabroberge/ts-json-as-const/actions/workflows/ci.yml)
+[![Server checks](https://github.com/gabroberge/ts-json-as-const/actions/workflows/ci.yaml/badge.svg)](https://github.com/gabroberge/ts-json-as-const/actions/workflows/ci.yaml)
 
 ## Installation
 
