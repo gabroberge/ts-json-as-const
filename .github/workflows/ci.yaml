@@ -49,11 +49,11 @@ jobs:
               env:
                   HUSKY: '0'
 
-            - name: Execute build
-              run: pnpm run build
-
             - name: Execute lint
               run: pnpm run lint
 
             - name: Execute tests
               run: pnpm run test
+
+            - name: Execute build
+              run: pnpm run build

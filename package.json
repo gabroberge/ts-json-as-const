@@ -19,7 +19,8 @@
 		"lint:eslint": "eslint \"**/*.{ts,json,md}\" --fix",
 		"lint:typescript": "tsc",
 		"test": "vitest run",
-		"prepare": "husky"
+		"prepare": "husky",
+		"release": "pnpm run build && changeset publish"
 	},
 	"keywords": [
 		"typescript",
