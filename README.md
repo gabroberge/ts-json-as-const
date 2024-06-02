@@ -1,12 +1,27 @@
 # ts-json-as-const
-[![License: ISC](https://img.shields.io/badge/License-ISC-yellow.svg)](#)
 
-A (very) simple CLI tool that reads JSON files and creates .d.ts files with their keys/values explicitly defined
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/gabroberge/ts-json-as-const/LICENSE)
 
-## Install
+[![Server checks](https://github.com/gabroberge/ts-json-as-const/actions/workflows/ci.yml/badge.svg)](https://github.com/gabroberge/ts-json-as-const/actions/workflows/ci.yml)
 
-```sh
-npm install ts-json-as-const
+## Installation
+
+Install with pnpm
+
+```bash
+pnpm add @gabroberge/ts-json-as-const
+```
+
+Install with yarn
+
+```bash
+yarn add @gabroberge/ts-json-as-const
+```
+
+Install with npm
+
+```bash
+npm install --save @gabroberge/ts-json-as-const
 ```
 
 ## Usage
@@ -15,50 +30,93 @@ npm install ts-json-as-const
 npx ts-json-as-const [path/to/json/file.json ...]
 ```
 
-## Example
+```sh
+pnpm dlx ts-json-as-const [path/to/json/file.json ...]
+```
+
+## Examples
 
 ### Input `example.json`
+
 ```json
 {
-  "foo": {
-    "bar": false,
-    "baz": true,
-    "i-can": "hascheezburger"
-  },
-  "array": [ 1, 2, 3, { "foo": 1, "bar": [ 4, 5 ] }, 6 ]
+	"compilerOptions": {
+		"target": "es2016",
+		"module": "commonjs",
+		"strict": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true
+	}
 }
 ```
 
 ### Output `example.json.d.ts`
+
 ```ts
-interface Example {
-  foo: {
-    bar: false;
-    baz: true;
-    'i-can': 'hascheezburger';
-  },
-  array: [
-    1,
-    2,
-    3,
-    {
-      foo: 1;
-      bar: [
-        4,
-        5
-      ]
-    },
-    6
-  ]
-}
-
-declare const Example: Example;
-
-export = Example;
+export type Tsconfig = {
+	compilerOptions: {
+		target: 'es2016';
+		module: 'commonjs';
+		strict: true;
+		esModuleInterop: true;
+		skipLibCheck: true;
+		forceConsistentCasingInFileNames: true;
+	};
+};
+declare const Tsconfig: Tsconfig;
+export = Tsconfig;
 ```
 
-## Author
+### Input `array.json`
 
-👤 **Bethany Hitch**
+```json
+[
+	{
+		"name": "John",
+		"age": 30,
+		"cars": [
+			{
+				"name": "Ford",
+				"models": [{ "name": "Fiesta" }, { "name": "Focus" }]
+			},
+			{
+				"name": "BMW",
+				"models": [{ "name": "320" }, { "name": "X3" }]
+			},
+			{
+				"name": "Fiat",
+				"models": [{ "name": "500" }, { "name": "Panda" }]
+			}
+		]
+	}
+]
+```
 
-* Github: [@dfoverdx](https://github.com/dfoverdx)
+### Output `array.json.d.ts`
+
+```ts
+export type Array = [
+	{
+		name: 'John';
+		age: 30;
+		cars: [
+			{ name: 'Ford'; models: [{ name: 'Fiesta' }, { name: 'Focus' }] },
+			{ name: 'BMW'; models: [{ name: '320' }, { name: 'X3' }] },
+			{ name: 'Fiat'; models: [{ name: '500' }, { name: 'Panda' }] },
+		];
+	},
+];
+declare const Array: Array;
+export = Array;
+```
+
+## Authors
+
+👤 **Gabriel Roberge**
+
+-   Github: [@gabroberge](https://github.com/gabroberge)
+
+👤 **Bethany Hitch** (Original Author)
+
+-   Github: [@dfoverdx](https://github.com/dfoverdx)

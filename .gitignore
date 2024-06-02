@@ -1,2 +1,12 @@
+# compiled output
+dist
 node_modules
-*.tgz
+
+# Environment variables
+.env
+.env.*
+!.env.sample
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
