@@ -54,7 +54,7 @@ pnpm dlx ts-json-as-const [path/to/json/file.json ...]
 ### Output `example.json.d.ts`
 
 ```ts
-export type Tsconfig = {
+export interface Tsconfig {
 	compilerOptions: {
 		target: 'es2016';
 		module: 'commonjs';
@@ -63,7 +63,7 @@ export type Tsconfig = {
 		skipLibCheck: true;
 		forceConsistentCasingInFileNames: true;
 	};
-};
+}
 declare const Tsconfig: Tsconfig;
 export = Tsconfig;
 ```
@@ -115,8 +115,8 @@ export = Array;
 
 👤 **Gabriel Roberge**
 
--   Github: [@gabroberge](https://github.com/gabroberge)
+- Github: [@gabroberge](https://github.com/gabroberge)
 
 👤 **Bethany Hitch** (Original Author)
 
--   Github: [@dfoverdx](https://github.com/dfoverdx)
+- Github: [@dfoverdx](https://github.com/dfoverdx)
