@@ -1,5 +1,11 @@
 # @gabroberge/ts-json-as-const
 
+## 3.0.0
+
+### Major Changes
+
+- 1616ace: Upgrade tooling and peer dependencies
+
 ## 2.0.0
 
 ### Major Changes
