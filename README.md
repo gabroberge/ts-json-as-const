@@ -6,10 +6,10 @@
 
 ## Installation
 
-Install with pnpm
+Install with bun
 
 ```bash
-pnpm add @gabroberge/ts-json-as-const
+bun add @gabroberge/ts-json-as-const
 ```
 
 Install with yarn
@@ -31,7 +31,7 @@ npx ts-json-as-const [path/to/json/file.json ...]
 ```
 
 ```sh
-pnpm dlx ts-json-as-const [path/to/json/file.json ...]
+bunx ts-json-as-const [path/to/json/file.json ...]
 ```
 
 ## Examples
