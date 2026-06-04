@@ -57,7 +57,7 @@
 		"@total-typescript/ts-reset": "^0.6.1",
 		"@types/node": "^25.7.0",
 		"@types/stringify-object": "^4.0.5",
-		"concurrently": "^9.2.1",
+		"concurrently": "^10.0.3",
 		"eslint": "^10.3.0",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-import": "^2.32.0",
