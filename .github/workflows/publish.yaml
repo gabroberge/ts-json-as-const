@@ -43,7 +43,13 @@ jobs:
               env:
                   HUSKY: '0'
 
-            - name: Use npm with OIDC trusted publishing support
+            - name: Set up Node.js for npm publish
+              uses: actions/setup-node@v4
+              with:
+                  node-version: '22'
+                  registry-url: 'https://registry.npmjs.org'
+
+            - name: Upgrade npm for OIDC trusted publishing
               run: npm install -g 'npm@^11.5.1'
 
             - name: Execute lint
