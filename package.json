@@ -40,9 +40,6 @@
 	},
 	"homepage": "https://github.com/gabroberge/ts-json-as-const#readme",
 	"bugs": "https://github.com/gabroberge/ts-json-as-const/issues",
-	"overrides": {
-		"@typescript-eslint/utils": "^8.59.3"
-	},
 	"peerDependencies": {
 		"inflection": "^3.0.2",
 		"isbinaryfile": "^6.0.0",
@@ -53,26 +50,26 @@
 		"@changesets/cli": "^2.31.0",
 		"@eslint/js": "^10.0.1",
 		"@total-typescript/ts-reset": "^0.6.1",
-		"@types/node": "^26.1.0",
+		"@types/node": "^26.1.1",
 		"@types/stringify-object": "^4.0.5",
 		"concurrently": "^10.0.3",
-		"eslint": "^10.5.0",
+		"eslint": "^10.6.0",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-import": "^2.32.0",
-		"eslint-plugin-jsonc": "^3.2.0",
+		"eslint-plugin-jsonc": "^3.3.0",
 		"eslint-plugin-markdown": "^5.1.0",
 		"eslint-plugin-vitest": "^0.5.4",
-		"globals": "^17.6.0",
+		"globals": "^17.7.0",
 		"husky": "^9.1.7",
 		"inflection": "^3.0.2",
 		"isbinaryfile": "^6.0.0",
 		"json5": "^2.2.3",
-		"prettier": "^3.8.4",
+		"prettier": "^3.9.4",
 		"prettier-plugin-organize-imports": "^4.3.0",
 		"stringify-object": "^7.0.0",
 		"tsup": "^8.5.1",
 		"typescript": "^6.0.3",
-		"typescript-eslint": "^8.61.1",
-		"vitest": "^4.1.9"
+		"typescript-eslint": "^8.63.0",
+		"vitest": "^4.1.10"
 	}
 }

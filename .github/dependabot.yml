@@ -3,6 +3,7 @@ updates:
     - package-ecosystem: "bun"
       directory: "/"
       target-branch: dev
+      versioning-strategy: increase
       schedule:
           interval: "weekly"
       assignees:

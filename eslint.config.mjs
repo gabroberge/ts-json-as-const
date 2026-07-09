@@ -4,10 +4,11 @@ import importPlugin from 'eslint-plugin-import';
 import jsonc from 'eslint-plugin-jsonc';
 import markdown from 'eslint-plugin-markdown';
 import vitest from 'eslint-plugin-vitest';
+import { defineConfig } from 'eslint/config';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
-export default tseslint.config(
+export default defineConfig(
 	{ ignores: ['**/*.d.ts', 'dist/**', 'node_modules/**'] },
 	eslint.configs.recommended,
 	...jsonc.configs['flat/recommended-with-jsonc'],
