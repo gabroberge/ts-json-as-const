@@ -64,7 +64,7 @@
 		"inflection": "^3.0.2",
 		"isbinaryfile": "^6.0.0",
 		"json5": "^2.2.3",
-		"prettier": "^3.9.4",
+		"prettier": "^3.9.5",
 		"prettier-plugin-organize-imports": "^4.3.0",
 		"stringify-object": "^7.0.0",
 		"tsup": "^8.5.1",
