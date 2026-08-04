@@ -8,7 +8,7 @@
         "@changesets/cli": "^2.31.1",
         "@eslint/js": "^10.0.1",
         "@total-typescript/ts-reset": "^0.6.1",
-        "@types/node": "^26.1.1",
+        "@types/node": "^26.1.2",
         "@types/stringify-object": "^4.0.5",
         "concurrently": "^10.0.3",
         "eslint": "^10.8.0",
@@ -291,7 +291,7 @@
 
     "@types/mdast": ["@types/mdast@3.0.15", "", { "dependencies": { "@types/unist": "2.0.11" } }, "sha512-LnwD+mUEfxWMa1QpDraczIn6k0Ee3SMicuYSSzS6ZYl2gKS09EClnJYGd8Du6rfc5r/GZEk5o1mRb8TaTj03sQ=="],
 
-    "@types/node": ["@types/node@26.1.1", "", { "dependencies": { "undici-types": "~8.3.0" } }, "sha512-nxAkRSVkN1Y0JC1W8ky/fTfkGsMmcrRsbx+3XoZE+rMOX71kLYTV7fLXpqud1GpbpP5TuffXFqfX7fH2GgZREw=="],
+    "@types/node": ["@types/node@26.1.2", "", { "dependencies": { "undici-types": "~8.3.0" } }, "sha512-Vu4a5UFA9rIIFJ7rB/Vaafh9lrCQszopTCx6KjFboXTGQbPNasehVR5TEiithSDGyd1DEiUByggTZsg8jukeIg=="],
 
     "@types/stringify-object": ["@types/stringify-object@4.0.5", "", {}, "sha512-TzX5V+njkbJ8iJ0mrj+Vqveep/1JBH4SSA3J2wYrE1eUrOhdsjTBCb0kao4EquSQ8KgPpqY4zSVP2vCPWKBElg=="],
 
