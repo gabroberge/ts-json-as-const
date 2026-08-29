@@ -40,12 +40,12 @@ gh api --method PUT "repos/${REPO}/vulnerability-alerts" >/dev/null
 echo "→ Enabling Dependabot security update PRs…"
 gh api --method PUT "repos/${REPO}/automated-security-fixes" >/dev/null
 
-echo "→ Setting Actions workflow token to read-only by default…"
+echo "→ Setting Actions workflow token to read-only by default (PR creation allowed for changesets)…"
 gh api --method PUT "repos/${REPO}/actions/permissions/workflow" \
 	--input - <<'EOF'
 {
   "default_workflow_permissions": "read",
-  "can_approve_pull_request_reviews": false
+  "can_approve_pull_request_reviews": true
 }
 EOF
 
