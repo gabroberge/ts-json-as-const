@@ -1,7 +1,7 @@
-import { existsSync, readFileSync, statSync } from 'fs';
-import { isBinaryFileSync } from 'isbinaryfile';
+import { existsSync, readFileSync, statSync } from "fs";
+import { isBinaryFileSync } from "isbinaryfile";
 
-import { processFileBuffer } from './process-file.buffer';
+import { processFileBuffer } from "./process-file.buffer";
 
 export function processFile(file: string): string {
 	if (!existsSync(file)) {
@@ -13,8 +13,8 @@ export function processFile(file: string): string {
 		console.error(`File '${file}' is not a file.  It is likely a directory.`);
 		process.exit(1);
 	}
-	const buffer = readFileSync(file);
 
+	const buffer = readFileSync(file);
 	if (isBinaryFileSync(buffer)) {
 		console.error(`File '${file}' is not a text file.`);
 		process.exit(1);

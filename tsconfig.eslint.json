@@ -1,0 +1,18 @@
+{
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"incremental": false,
+		"noEmit": true,
+		"rootDir": "."
+	},
+	"include": [
+		"apps/*/src/**/*.ts",
+		"apps/*/test/**/*.ts",
+		"apps/*/vitest.config.ts",
+		"packages/*/src/**/*.ts",
+		"packages/*/tsdown.config.ts",
+		"packages/*/tsdown.dev.config.ts",
+		"packages/*/vitest.config.ts",
+		"vitest.config.ts"
+	]
+}

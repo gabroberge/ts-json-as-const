@@ -56,8 +56,8 @@ bunx ts-json-as-const [path/to/json/file.json ...]
 ```ts
 export interface Tsconfig {
 	compilerOptions: {
-		target: 'es2016';
-		module: 'commonjs';
+		target: "es2016";
+		module: "commonjs";
 		strict: true;
 		esModuleInterop: true;
 		skipLibCheck: true;
@@ -98,14 +98,14 @@ export = Tsconfig;
 ```ts
 export type Array = [
 	{
-		name: 'John';
+		name: "John";
 		age: 30;
 		cars: [
-			{ name: 'Ford'; models: [{ name: 'Fiesta' }, { name: 'Focus' }] },
-			{ name: 'BMW'; models: [{ name: '320' }, { name: 'X3' }] },
-			{ name: 'Fiat'; models: [{ name: '500' }, { name: 'Panda' }] },
+			{ name: "Ford"; models: [{ name: "Fiesta" }, { name: "Focus" }] },
+			{ name: "BMW"; models: [{ name: "320" }, { name: "X3" }] },
+			{ name: "Fiat"; models: [{ name: "500" }, { name: "Panda" }] }
 		];
-	},
+	}
 ];
 declare const Array: Array;
 export = Array;
