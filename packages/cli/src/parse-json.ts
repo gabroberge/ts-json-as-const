@@ -1,5 +1,5 @@
-import json5 from 'json5';
-import stringifyObject from 'stringify-object';
+import json5 from "json5";
+import stringifyObject from "stringify-object";
 
 export interface ParseJsonContext {
 	buffer: Buffer;
@@ -15,9 +15,9 @@ export function parseJson({ buffer, file }: ParseJsonContext): ParseJsonResult {
 	try {
 		const json: unknown = json5.parse(buffer.toString());
 		const serialisedJson = stringifyObject(json, {
-			indent: '\t',
+			indent: "\t",
 			inlineCharacterLimit: 80,
-			singleQuotes: false,
+			singleQuotes: false
 		});
 
 		return { json, serialisedJson };

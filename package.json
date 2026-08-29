@@ -1,75 +1,50 @@
 {
-	"name": "@gabroberge/ts-json-as-const",
-	"version": "2.0.0",
-	"description": "A (very) simple CLI tool that reads JSON files and creates .d.ts files with their keys/values explicitly defined",
-	"private": false,
-	"main": "./dist/index.js",
-	"module": "./dist/index.js",
-	"types": "./dist/index.d.ts",
-	"bin": {
-		"ts-json-as-const": "./dist/index.js"
-	},
-	"packageManager": "bun@1.3.13",
-	"type": "module",
-	"engines": {
-		"node": ">=22"
-	},
-	"scripts": {
-		"build": "tsup",
-		"dev": "node dist/index.js",
-		"format": "prettier --write \"**/*.{ts,json,md}\"",
-		"lint": "concurrently --raw \"bun run lint:eslint\" \"bun run lint:typescript\"",
-		"lint:eslint": "eslint \"**/*.{ts,json,md}\" --fix",
-		"lint:typescript": "tsc",
-		"test": "vitest run",
-		"prepare": "husky",
-		"release": "bun run build && changeset publish"
-	},
-	"keywords": [
-		"typescript",
-		"json",
-		"const",
-		"declaration",
-		"declaration files"
+	"name": "ts-json-as-const",
+	"private": true,
+	"workspaces": [
+		"apps/*",
+		"packages/*"
 	],
-	"author": "Gabriel Roberge",
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/gabroberge/ts-json-as-const.git"
-	},
-	"homepage": "https://github.com/gabroberge/ts-json-as-const#readme",
-	"bugs": "https://github.com/gabroberge/ts-json-as-const/issues",
-	"peerDependencies": {
-		"inflection": "^3.0.2",
-		"isbinaryfile": "^6.0.0",
-		"json5": "^2.2.3",
-		"stringify-object": "^7.0.0"
+	"type": "module",
+	"scripts": {
+		"build": "turbo run build",
+		"format": "oxfmt",
+		"format:check": "oxfmt --check",
+		"lint": "turbo run lint",
+		"prepare": "husky",
+		"start:dev": "turbo run start:dev",
+		"test": "turbo run test",
+		"typecheck": "tsc -b tsconfig.build.json"
 	},
 	"devDependencies": {
-		"@changesets/cli": "^2.31.0",
+		"@changesets/changelog-github": "^1.0.0",
+		"@changesets/cli": "^3.0.1",
+		"@commitlint/cli": "^21.2.2",
+		"@commitlint/config-conventional": "^21.2.2",
 		"@eslint/js": "^10.0.1",
-		"@total-typescript/ts-reset": "^0.6.1",
-		"@types/node": "^26.1.1",
-		"@types/stringify-object": "^4.0.5",
-		"concurrently": "^10.0.3",
-		"eslint": "^10.6.0",
-		"eslint-config-prettier": "^10.1.8",
-		"eslint-plugin-import": "^2.32.0",
-		"eslint-plugin-jsonc": "^3.3.0",
-		"eslint-plugin-markdown": "^5.1.0",
-		"eslint-plugin-vitest": "^0.5.4",
-		"globals": "^17.7.0",
+		"@types/node": "^26.4.0",
+		"@vitest/coverage-v8": "^4.1.11",
+		"@vitest/eslint-plugin": "^1.6.27",
+		"eslint": "^10.9.1",
+		"eslint-plugin-perfectionist": "^5.10.1",
 		"husky": "^9.1.7",
-		"inflection": "^3.0.2",
-		"isbinaryfile": "^6.0.0",
-		"json5": "^2.2.3",
-		"prettier": "^3.9.4",
-		"prettier-plugin-organize-imports": "^4.3.0",
-		"stringify-object": "^7.0.0",
-		"tsup": "^8.5.1",
+		"lint-staged": "^17.4.1",
+		"oxfmt": "^0.65.0",
+		"tsc-files": "^1.1.4",
+		"tsdown": "^0.22.14",
+		"turbo": "^2.10.12",
 		"typescript": "^6.0.3",
-		"typescript-eslint": "^8.63.0",
-		"vitest": "^4.1.10"
+		"typescript-eslint": "^8.68.0",
+		"vitest": "^4.1.11"
+	},
+	"devEngines": {
+		"packageManager": {
+			"name": "bun",
+			"version": "1.3.13",
+			"onFail": "ignore"
+		}
+	},
+	"engines": {
+		"node": ">=26"
 	}
 }
